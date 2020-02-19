@@ -1,10 +1,10 @@
-package com.wildfife.park.server;
+package com.wildlife.park.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServerApplicationTests {
+class AuthApplicationTests {
 
 	@Test
 	void contextLoads() {
