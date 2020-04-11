@@ -1,0 +1,9 @@
+datasources:
+  oracle:
+    jdbcUrl: jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORCL)))
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: WLPARK
+    password: WLP041105
+    type: com.zaxxer.hikari.HikariDataSource
+    min-idle: 1
+    max-active: 5
