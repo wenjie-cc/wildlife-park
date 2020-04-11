@@ -1,4 +1,4 @@
-package com.wildlife.park.eureka.gateway;
+package com.wildlife.park.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

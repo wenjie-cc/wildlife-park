@@ -1,10 +1,10 @@
-package com.wildlife.park.eureka.auth;
+package com.wildlife.park.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthApplicationTests {
+class WLPAuthApplicationTests {
 
 	@Test
 	void contextLoads() {

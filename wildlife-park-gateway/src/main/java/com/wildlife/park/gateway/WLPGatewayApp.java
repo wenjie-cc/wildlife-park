@@ -1,13 +1,15 @@
-package com.wildlife.park.eureka.gateway;
+package com.wildlife.park.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-public class GatewayApplication {
+@EnableEurekaClient
+public class WLPGatewayApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(WLPGatewayApp.class, args);
     }
 
 }
