@@ -18,6 +18,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.wildlife.park</groupId>
+			<artifactId>wildlife-park-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<!--包含了sleuth+zipkin-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
