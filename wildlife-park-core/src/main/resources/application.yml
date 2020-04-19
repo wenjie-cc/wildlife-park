@@ -35,6 +35,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 10000
+      circuitBreaker:
+        enabled: true
+        requestVolumeThreshold: 10
+        sleepWindowInMilliseconds: 10000
+        errorThresholdPercentage: 60
 
 feign:
   hystrix:

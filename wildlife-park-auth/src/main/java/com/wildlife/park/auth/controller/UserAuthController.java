@@ -52,6 +52,11 @@ public class UserAuthController implements CommonConstants {
              return "Success==>"+ IdUtil.fastSimpleUUID();
     }
 
+    /**
+     * Fall Back Method for HelloWorldCircuitBreak(@PathVariable("id") Integer id);
+     * @param id
+     * @return
+     */
     public String CircuitBreakFallBack(@PathVariable("id") Integer id){
         return "Resource is busy, Please try again in 10 seconds. o(╥﹏╥)o"+id;
     }
