@@ -14,5 +14,7 @@ SprintCloud Hoxton.SR1
 数据库： Oracle 12c
 
 DateSource： HikariCP 3.4.2
+Open Feign
+hystrix
 
 SprintBootMaven 2.2.6  --> 后期换成 Gradle
