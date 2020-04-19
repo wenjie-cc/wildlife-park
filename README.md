@@ -15,6 +15,6 @@ SprintCloud Hoxton.SR1
 
 DateSource： HikariCP 3.4.2
 Open Feign
-hystrix
+Hystrix
 
 SprintBootMaven 2.2.6  --> 后期换成 Gradle
