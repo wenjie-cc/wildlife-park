@@ -6,7 +6,6 @@
 		<groupId>com.wildlife.park</groupId>
 		<artifactId>wildlife-park</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<artifactId>wildlife-park-core</artifactId>
@@ -67,6 +66,21 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<!--openfeign-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<!--hystrix-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.easyproject</groupId>
+			<artifactId>orai18n</artifactId>
+			<version>${orai18n.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

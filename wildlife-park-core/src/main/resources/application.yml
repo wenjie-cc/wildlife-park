@@ -1,5 +1,7 @@
 server:
   port: 8001
+  servlet:
+    context-path: /wp/core
 
 spring:
   application:
@@ -19,3 +21,25 @@ eureka:
     instance-id: localhost
     # 访问路径可以显示ip地址
     prefer-ip-address: true
+
+ribbon:
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    com.wildfife.park.core.service.feign.UserAuthFeignService: debug

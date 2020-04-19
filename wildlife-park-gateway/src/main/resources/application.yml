@@ -20,3 +20,7 @@ eureka:
     # 访问路径可以显示ip地址
     prefer-ip-address: true
 
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
