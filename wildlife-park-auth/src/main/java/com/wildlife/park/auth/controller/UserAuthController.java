@@ -46,10 +46,10 @@ public class UserAuthController implements CommonConstants {
     public String HelloWorldCircuitBreak(@PathVariable("id") Integer id){
         Map<String, String> map = new HashMap<>();
         UserEntity userInfo = null;
-             if(id<0){
-                 throw new RuntimeException("Id should not be Negative==>"+id);
-             }
-             return "Success==>"+ IdUtil.fastSimpleUUID();
+        if(id<0){
+            throw new RuntimeException("Id should not be Negative==>"+id);
+        }
+        return "Success==>"+ IdUtil.fastSimpleUUID();
     }
 
     /**

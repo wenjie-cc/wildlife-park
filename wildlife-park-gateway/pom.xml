@@ -18,12 +18,18 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.wildlife.park</groupId>
+            <artifactId>wildlife-park-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- spring cloud gateway-->
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
         <!--eureka client-->
         <dependency>
@@ -39,11 +45,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
-        <!--监控-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!--热部署-->
         <dependency>
