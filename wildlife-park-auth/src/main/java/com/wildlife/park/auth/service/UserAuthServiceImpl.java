@@ -13,17 +13,17 @@ import java.util.Optional;
  * @date 2020/4/18
  */
 @Service
-public class UserAuthServiceImpl implements UserAuthService{
+public class UserAuthServiceImpl implements UserAuthService {
     @Autowired
     UserRepository userRepository;
 
     @Override
-    public UserEntity userAuthentication(UserEntity userEntity) throws Exception {
+    public UserEntity userAuthentication(UserEntity userEntity) {
 
-        final Optional<UserEntity> option = userRepository.findById(userEntity.getUserId());
-        if(option.isPresent()){
+        final Optional<UserEntity> option = userRepository.findById(userEntity.getId());
+        if (option.isPresent()) {
             return option.get();
         }
-         return null;
+        return null;
     }
 }

@@ -20,10 +20,10 @@ public class UserEntity extends BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "wp_user_id")
     @SequenceGenerator(name = "wp_user_id" ,sequenceName = "WP_USER_SEQ", allocationSize = 1)
     @Column(name = "ID")
-    private Long userId;
+    private Long id;
 
     @Column(name = "USER_NAME")
-    private String userName;
+    private String name;
 
     @Column(name = "AGE")
     private Integer age;
