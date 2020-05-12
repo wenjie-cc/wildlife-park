@@ -1,127 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.wildlife.park</groupId>
-	<artifactId>wildlife-park</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>wildlife-park</name>
-	<description>Parent project for wildlife park</description>
+    <groupId>com.wildlife.park</groupId>
+    <artifactId>wildlife-park</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>wildlife-park</name>
+    <description>Parent project for wildlife park</description>
 
-	<packaging>pom</packaging>
+    <packaging>pom</packaging>
 
-	<modules>
-		<module>wildlife-park-auth</module>
-		<module>wildlife-park-gateway</module>
-		<module>wildlife-park-core</module>
-		<module>wildlife-park-eureka</module>
-		<module>wildlife-park-common</module>
-	</modules>
+    <modules>
+        <module>wildlife-park-auth</module>
+        <module>wildlife-park-gateway</module>
+        <module>wildlife-park-core</module>
+        <module>wildlife-park-eureka</module>
+        <module>wildlife-park-common</module>
+    </modules>
 
-	<!--统一管理jar包版本-->
-	<properties>
-		<java.version>1.8</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<junit.version>4.12</junit.version>
-		<log4j.version>1.2.17</log4j.version>
-		<lombok.version>1.16.18</lombok.version>
-		<mysql.version>8.0.18</mysql.version>
-		<ojdbc.version>19.3.0.0</ojdbc.version>
-		<druid.version>1.1.16</druid.version>
-		<com.zaxxer.HikariCP.version>3.4.2</com.zaxxer.HikariCP.version>
-		<druid.spring.boot.starter.version>1.1.10</druid.spring.boot.starter.version>
-		<spring.boot.version>2.2.2.RELEASE</spring.boot.version>
-		<spring.cloud.version>Hoxton.SR1</spring.cloud.version>
-		<spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
-		<mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
-		<mybatis-spring-boot-starter.version>2.1.1</mybatis-spring-boot-starter.version>
-		<hutool-all.version>5.3.1</hutool-all.version>
-		<spring.boot.maven.version>2.2.6.RELEASE</spring.boot.maven.version>
-		<orai18n.version>12.1.0.2.0</orai18n.version>
-	</properties>
+    <!--统一管理jar包版本-->
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <lombok.version>1.16.18</lombok.version>
+        <mysql.version>8.0.18</mysql.version>
+        <ojdbc.version>19.3.0.0</ojdbc.version>
+        <druid.version>1.1.16</druid.version>
+        <com.zaxxer.HikariCP.version>3.4.2</com.zaxxer.HikariCP.version>
+        <druid.spring.boot.starter.version>1.1.10</druid.spring.boot.starter.version>
+        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+        <spring.cloud.version>Hoxton.SR1</spring.cloud.version>
+        <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
+        <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+        <mybatis-spring-boot-starter.version>2.1.1</mybatis-spring-boot-starter.version>
+        <hutool-all.version>5.3.1</hutool-all.version>
+        <spring.boot.maven.version>2.2.6.RELEASE</spring.boot.maven.version>
+        <orai18n.version>12.1.0.2.0</orai18n.version>
+        <flyway.version>6.4.1</flyway.version>
+    </properties>
 
 
-	<!--子模块继承后,提供作用:锁定版本+子module不用groupId和version-->
-	<dependencyManagement>
-		<dependencies>
-			<!--springboot 2.2.2-->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring.boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<!--Spring cloud Hoxton.SR1-->
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring.cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<!--Spring cloud alibaba 2.1.0.RELEASE-->
-			<dependency>
-				<groupId>com.alibaba.cloud</groupId>
-				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
-				<version>${spring.cloud.alibaba.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		<!--	<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql.version}</version>
-			</dependency>-->
-			<dependency>
-				<groupId>com.oracle.ojdbc</groupId>
-				<artifactId>ojdbc8</artifactId>
-				<version>${ojdbc.version}</version>
-			</dependency>
-			<!--<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>${druid.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid-spring-boot-starter</artifactId>
-				<version>${druid.spring.boot.starter.version}</version>
-			</dependency>-->
-			<dependency>
-				<groupId>com.zaxxer</groupId>
-				<artifactId>HikariCP</artifactId>
-				<version>${com.zaxxer.HikariCP.version}</version>
-			</dependency>
+    <!--子模块继承后,提供作用:锁定版本+子module不用groupId和version-->
+    <dependencyManagement>
+        <dependencies>
+            <!--springboot 2.2.2-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--Spring cloud Hoxton.SR1-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--Spring cloud alibaba 2.1.0.RELEASE-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--	<dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <version>${mysql.version}</version>
+                </dependency>-->
+            <dependency>
+                <groupId>com.oracle.ojdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>${ojdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway.version}</version>
+            </dependency>
+            <!--<dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.spring.boot.starter.version}</version>
+            </dependency>-->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${com.zaxxer.HikariCP.version}</version>
+            </dependency>
 
-			<dependency>
-				<groupId>org.mybatis.spring.boot</groupId>
-				<artifactId>mybatis-spring-boot-starter</artifactId>
-				<version>${mybatis-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>cn.easyproject</groupId>
-				<artifactId>orai18n</artifactId>
-				<version>${orai18n.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>${lombok.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.easyproject</groupId>
+                <artifactId>orai18n</artifactId>
+                <version>${orai18n.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
