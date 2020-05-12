@@ -1,6 +1,6 @@
 package com.wildlife.park.auth.repository;
 
-import com.wildlife.park.common.entity.UserEntity;
+import com.wildlife.park.auth.entity.UserEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

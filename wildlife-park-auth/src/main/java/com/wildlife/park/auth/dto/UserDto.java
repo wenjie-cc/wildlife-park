@@ -1,6 +1,6 @@
-package com.wildlife.park.common.dto;
+package com.wildlife.park.auth.dto;
 
-import com.wildlife.park.common.entity.UserEntity;
+import com.wildlife.park.auth.entity.UserEntity;
 import lombok.Builder;
 import lombok.Data;
 

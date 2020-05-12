@@ -1,7 +1,7 @@
 package com.wildlife.park.auth.service;
 
 import com.wildlife.park.auth.repository.UserRepository;
-import com.wildlife.park.common.entity.UserEntity;
+import com.wildlife.park.auth.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
