@@ -14,7 +14,7 @@ import javax.persistence.MappedSuperclass;
  */
 @Data
 @MappedSuperclass
-public abstract class BaseNameEntity extends BaseEntity {
+public abstract class BaseUniqueNameEntity extends BaseEntity {
     @Column(unique = true, length = 80, nullable = false)
     private String name;
 }

@@ -1,6 +1,6 @@
 package com.wildlife.park.auth.entity;
 
-import com.wildlife.park.common.entity.BaseNameEntity;
+import com.wildlife.park.common.entity.BaseUniqueNameEntity;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,7 +12,7 @@ import java.util.Set;
  */
 @Data
 @Table(name = "WP_ROLE", schema = "C##WLPARK")
-public class Role extends BaseNameEntity {
+public class Role extends BaseUniqueNameEntity {
     /**
      * 是否启用
      */
