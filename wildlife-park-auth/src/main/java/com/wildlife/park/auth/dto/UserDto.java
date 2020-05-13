@@ -16,6 +16,6 @@ public class UserDto {
     private String memo;
 
     public static UserDto of(User entity) {
-        return UserDto.builder().id(entity.getId()).name(entity.getName()).age(entity.getAge()).build();
+        return UserDto.builder().id(entity.getId()).name(entity.getName()).build();
     }
 }

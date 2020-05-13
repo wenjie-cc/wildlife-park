@@ -1,6 +1,7 @@
 package com.wildlife.park.auth.entity;
 
 import com.wildlife.park.common.entity.BaseUniqueNameEntity;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -9,6 +10,8 @@ import java.util.Set;
 /**
  * @author wenjie
  */
+@Data
+@Entity
 public class Functionality extends BaseUniqueNameEntity {
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "WP_ROLE_FUNCTIONALITY", joinColumns = @JoinColumn(name = "FUNCTIONALITY_ID"), inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))

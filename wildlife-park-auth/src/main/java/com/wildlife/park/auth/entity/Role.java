@@ -11,6 +11,7 @@ import java.util.Set;
  * @author wenjie
  */
 @Data
+@Entity
 @Table(name = "WP_ROLE", schema = "C##WLPARK")
 public class Role extends BaseUniqueNameEntity {
     /**
@@ -33,6 +34,10 @@ public class Role extends BaseUniqueNameEntity {
      * 用户
      */
     @ManyToMany(cascade = {CascadeType.REFRESH, CascadeType.MERGE}, fetch = FetchType.LAZY)
-    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "role_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "role_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
     private Set<User> users = new HashSet<>();
+
+    @ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinTable(name = "role_functionality", joinColumns = @JoinColumn(name = "role_id"), inverseJoinColumns = @JoinColumn(name = "functionality_id"))
+    private Set<Functionality> functionaries = new HashSet<>();
 }
