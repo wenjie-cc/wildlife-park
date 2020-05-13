@@ -1,6 +1,6 @@
 package com.wildlife.park.auth.repository;
 
-import com.wildlife.park.auth.entity.UserEntity;
+import com.wildlife.park.auth.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +22,7 @@ public class UserRepoTest {
     @Test
     @Rollback(value = false)
     public void testSaveUser(){
-        UserEntity user = new UserEntity();
+        User user = new User();
         user.setUserName("Jack");
         user.setAge(18);
         user.setCreatedBy("Yan");

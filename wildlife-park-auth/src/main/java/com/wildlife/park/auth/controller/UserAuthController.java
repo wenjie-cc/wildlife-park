@@ -6,7 +6,7 @@ import com.wildlife.park.auth.service.UserAuthService;
 import com.wildlife.park.common.constant.CommonConstants;
 import com.wildlife.park.common.CommonResult;
 import com.wildlife.park.auth.dto.UserDto;
-import com.wildlife.park.auth.entity.UserEntity;
+import com.wildlife.park.auth.entity.User;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -31,8 +31,8 @@ public class UserAuthController implements CommonConstants {
 
     @PostMapping(value = "/authentication", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public CommonResult<?> userAuthentication(@RequestBody UserEntity userEntity) {
-        UserEntity entity = userAuthService.userAuthentication(userEntity);
+    public CommonResult<?> userAuthentication(@RequestBody User user) {
+        User entity = userAuthService.userAuthentication(user);
         return CommonResult.success(UserDto.of(entity));
     }
 
@@ -41,7 +41,7 @@ public class UserAuthController implements CommonConstants {
     @ResponseBody
     public String HelloWorldCircuitBreak(@PathVariable("id") Integer id) {
         Map<String, String> map = new HashMap<>();
-        UserEntity userInfo = null;
+        User userInfo = null;
         if (id < 0) {
             throw new RuntimeException("Id should not be Negative==>" + id);
         }

@@ -1,6 +1,6 @@
 package com.wildlife.park.auth.service;
 
-import com.wildlife.park.auth.entity.UserEntity;
+import com.wildlife.park.auth.entity.User;
 
 /**
  * @author wenjiewu
@@ -8,8 +8,8 @@ import com.wildlife.park.auth.entity.UserEntity;
 public interface UserAuthService {
     /**
      *
-     * @param userEntity
+     * @param user
      * @return
      */
-    UserEntity userAuthentication(UserEntity userEntity);
+    User userAuthentication(User user);
 }

@@ -2,8 +2,7 @@ CREATE TABLE C##WLPARK.WP_USER
 (
     ID            NUMBER       not null,
     USER_NAME     VARCHAR2(30) not null,
-    MEMO          VARCHAR2(30),
-    AGE           NUMBER(2, 0),
+    MEMO          VARCHAR2(80),
     CREATED_BY    VARCHAR2(30),
     CREATED_TIME  timestamp(6),
     MODIFIED_BY   VARCHAR2(30),

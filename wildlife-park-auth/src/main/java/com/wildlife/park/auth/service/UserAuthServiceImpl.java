@@ -1,7 +1,7 @@
 package com.wildlife.park.auth.service;
 
 import com.wildlife.park.auth.repository.UserRepository;
-import com.wildlife.park.auth.entity.UserEntity;
+import com.wildlife.park.auth.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +18,9 @@ public class UserAuthServiceImpl implements UserAuthService {
     UserRepository userRepository;
 
     @Override
-    public UserEntity userAuthentication(UserEntity userEntity) {
+    public User userAuthentication(User user) {
 
-        final Optional<UserEntity> option = userRepository.findById(userEntity.getId());
+        final Optional<User> option = userRepository.findById(user.getId());
         if (option.isPresent()) {
             return option.get();
         }

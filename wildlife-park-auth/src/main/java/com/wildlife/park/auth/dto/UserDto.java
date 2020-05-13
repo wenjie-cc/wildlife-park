@@ -1,6 +1,6 @@
 package com.wildlife.park.auth.dto;
 
-import com.wildlife.park.auth.entity.UserEntity;
+import com.wildlife.park.auth.entity.User;
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,7 +15,7 @@ public class UserDto {
     private Integer age;
     private String memo;
 
-    public static UserDto of(UserEntity entity) {
+    public static UserDto of(User entity) {
         return UserDto.builder().id(entity.getId()).name(entity.getName()).age(entity.getAge()).build();
     }
 }
