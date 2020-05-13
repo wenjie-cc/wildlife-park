@@ -17,13 +17,13 @@ import org.springframework.context.annotation.Bean;
 @Log4j2
 @SpringBootApplication
 @EnableEurekaServer
-public class WLPEurekaApplication {
+public class EurekaApplication {
 
     @Value("${server.port}")
     private String port;
 
     public static void main(String[] args) {
-        SpringApplication.run(WLPEurekaApplication.class);
+        SpringApplication.run(EurekaApplication.class);
     }
 
     @Bean("initStarter")
